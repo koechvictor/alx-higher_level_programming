@@ -9,12 +9,12 @@ if len(argv) != 4:
     b = argv[3]
     op = argv[2]
     ops = {
-        '+':add(a, b)
-        '-':sub(a, b)
-        '*':mul(a, b)
-        '/':div(a, b)}
-    if op in ops.key():
-        print("{:d} {} {:d} = {:d}".format(a, op, b))
+            "+": add(a, b),
+            "-": sub(a, b),
+            "*": mul(a, b),
+            "/": div(a, b)}
+    if op in ops.keys():
+        print("{:d} {} {:d} = {:d}".format(a, op, b, ops[op]))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
