@@ -4,10 +4,10 @@ def safe_print_division(a, b):
         value = a / b
     except:
         pass
-    finally
+    finally:
         try
             print("Inside result: {}".format(value))
-        except
+        except:
             print("Inside result: {}".format(None))
             return None
     return value
