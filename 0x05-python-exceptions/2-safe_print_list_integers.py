@@ -6,9 +6,9 @@ def safe_print_list_integers(my_list=[], x=0):
             if str(my_list[i]).isdigit():
                 count += 1
             print("{:d}".format(my_list[i]), end='')
-        except ValueError
+        except ValueError:
             pass
-        except TypeError
+        except TypeError:
             pass
     print()
     return count
