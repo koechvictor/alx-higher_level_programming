@@ -5,4 +5,4 @@
 class Square:
     """based on 0-square.py"""
     def __init__(self, size):
-        self._size = size
+        self.__size = size
