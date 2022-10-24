@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""
-try to add a new attribute to an obj
-"""
+"""Module for add_atribute method"""
 
 
-def add_attribute(a, name, other):
-    """ try to add a new attribute """
-    raise TypeError("can't add new attribute")
+def add_attribute(obj, att, val):
+    """Module for add_atribute method"""
+    if hasattr(obj, '__dict__') is True:
+        setattr(obj, att, val)
+    else:
+        raise TypeError("can't add new attribute")
