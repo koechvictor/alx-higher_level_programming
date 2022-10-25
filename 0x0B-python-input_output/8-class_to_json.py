@@ -1,13 +1,7 @@
 #!/usr/bin/python3
-"""
-save json to a text file
-"""
-import json
+"""Defines a Python class-to-JSON function."""
 
 
-def load_from_json_file(filename):
-    """ prints file contents """
-    if filename == "":
-        return
-    with open(filename, "r") as f:
-        return json.load(f)
+def class_to_json(obj):
+    """Return the dictionary represntation of a simple data structure."""
+    return obj.__dict__
