@@ -1,13 +1,8 @@
 #!/usr/bin/python3
-"""
-Program that writes text to a file
-"""
+"""Defines a string-to-JSON function."""
+import json
 
 
-def write_file(filename="", text=""):
-    """ write to a file and return # of characters written """
-    if filename == "":
-        return
-    with open(filename, "w") as f:
-        f.write(text)
-    return len(text)
+def to_json_string(my_obj):
+    """Return the JSON representation of a string object."""
+    return json.dumps(my_obj)
