@@ -1,17 +1,15 @@
 #!/usr/bin/python3
-"""
-Program that counts lines in a file
-"""
+"""reads n lines of a text file"""
 
 
 def read_lines(filename="", nb_lines=0):
-    """ count lines in file """
-    if filename == "":
-        return
-    if nb_lines <= 0:
-        with open(filename, "r") as f:
+    """reads n lines of a text file"""
+    count = 0
+    with open(filename, encoding="utf-8") as f:
+        if nb_lines <= 0:
             print(f.read(), end="")
-    else:
-        with open(filename, "r") as f:
-            head = [next(f) for x in range(nb_lines)]
-        print("".join(head), end="")
+        for l in f:
+            count += 1
+            if count > nb_lines:
+                break
+            print(line, end="")
