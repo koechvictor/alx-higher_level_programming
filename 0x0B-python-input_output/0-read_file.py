@@ -3,6 +3,7 @@
 a function that reads a text file  and prints it to stdout
 """
 
+
 def read_file(filename=""):
     """prints file contents"""
     if filename == "":
