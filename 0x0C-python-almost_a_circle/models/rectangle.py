@@ -42,4 +42,22 @@ class Rectangle(Base):
             raise TypeError("height must be an integer")
         elif value <= 0:
             raise ValueError("height must be > 0")
-        self.__height = value
+        self.__height = valu
+
+    @property
+    def y(self):
+        """
+        returns y value
+        """
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        """
+        sets y value
+        """
+        if type(value) is not int:
+            raise TypeError("y must be an integer")
+        elif value < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = value
