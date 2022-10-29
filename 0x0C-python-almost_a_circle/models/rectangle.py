@@ -74,3 +74,10 @@ class Rectangle(Base):
             print()
         for height in range(self.__height):
             print(" " * self.__x + "#" * self.__width)
+
+    def __str__(self):
+        """ string representation of class """
+        string = "[{:s}] ({:d})".format(type(self).__name__, self.id)
+        string += " {:d}/{:d} ".format(self.__x, self.__y)
+        string += "- {:d}/{:d}".format(self.__width, self.__height)
+        return string
