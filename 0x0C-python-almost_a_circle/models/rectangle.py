@@ -67,3 +67,10 @@ class Rectangle(Base):
         area of a rectangle
         """
         return self.__height * self.__width
+
+    def display(self):
+        """ display """
+        for v_shift in range(self.__y):
+            print()
+        for height in range(self.__height):
+            print(" " * self.__x + "#" * self.__width)
