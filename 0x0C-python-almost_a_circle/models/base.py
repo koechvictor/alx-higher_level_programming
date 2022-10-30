@@ -30,3 +30,10 @@ class Base:
             LO_dict = [x.to_dictionary() for x in list_objs]
         with open(cls.__name__ + ".json", "w") as f:
             f.write(cls.to_json_string(LO_dict))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ returns the list of the JSON string representation """
+        if json_string is None or json_string == "[]":
+            return []
+        return json.loads(json_string)
