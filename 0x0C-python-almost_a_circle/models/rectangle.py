@@ -106,3 +106,10 @@ class Rectangle(Base):
             self.x = args[3]
         if argCount > 4:
             self.y = args[4]
+
+    def to_dictionary(self):
+        """ to dictionary """
+        dict_rec = {"x": self.__x, "y": self.__y, "id": self.id}
+        dict_rec["width"] = self.__width
+        dict_rec["height"] = self.__height
+        return dict_rec
