@@ -81,3 +81,28 @@ class Rectangle(Base):
         string += " {:d}/{:d} ".format(self.__x, self.__y)
         string += "- {:d}/{:d}".format(self.__width, self.__height)
         return string
+
+    def update(self, *args, **kwargs):
+        """ update class """
+        argCount = len(args)
+        if argCount == 0:
+            if "id" in kwargs.keys():
+                super().__init__(kwargs["id"])
+            if "width" in kwargs.keys():
+                self.width = kwargs["width"]
+            if "height" in kwargs.keys():
+                self.height = kwargs["height"]
+            if "x" in kwargs.keys():
+                self.x = kwargs["x"]
+            if "y" in kwargs.keys():
+                self.y = kwargs["y"]
+        if argCount > 0:
+            super().__init__(args[0])
+        if argCount > 1:
+            self.width = args[1]
+        if argCount > 2:
+            self.height = args[2]
+        if argCount > 3:
+            self.x = args[3]
+        if argCount > 4:
+            self.y = args[4]
