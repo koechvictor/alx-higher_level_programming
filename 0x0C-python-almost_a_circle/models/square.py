@@ -44,3 +44,10 @@ class Square(Rectangle):
             self.x = args[2]
         if argCount > 3:
             self.y = args[3]
+
+    def __str__(self):
+        """ string representation of class """
+        string = "[{:s}] ({:d})".format(type(self).__name__, self.id)
+        string += " {:d}/{:d} ".format(self.x, self.y)
+        string += "- {:d}".format(self.size)
+        return string
