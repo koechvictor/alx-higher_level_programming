@@ -77,7 +77,7 @@ class Base:
             turtle.fd(rec["width"])
             turtle.right(90)
             turtle.fd(rec["height"])
-        
+
         for square in list_squares:
             size = square["size"]
             turtle.up()
